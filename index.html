@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap">
+      <title>Mistério Numérico</title>
+  </head>
+  <body>
+    <div id="telaInicial">
+      <!-- Mensagem de abertura -->
+      <div id="abertura" class="sacao">
+          <p id="mensagem1"></p>
+          <p id="mensagem2"></p>
+      </div> 
+      <!-- Botão para pular abertura -->
+      <div id="rodape" class="piscando">
+          <p id="skip">Toque para pular</p>
+      </div>
+    </div>
+    <div id="TelaMenu" class="secao">
+      <header>
+        <h1 class= "tituloMenu" > Mistério Numérico</h1>
+        <nav>
+          <ul>
+            <button onclick="showSection('TelaNewGame')">Girar a Manivela</button>
+            <button onclick="showSection('TelaRules')">Consultar as Notas do Caso</button>
+            <button onclick="showSection('TelaCredits')">Proprietário do cofre</button>
+            <button onclick="showSection('TelaExit')">Desistir do Caso</button>
+          </ul>
+        </nav>
+      </header>    
+    </div>
+    <div id="TelaNewGame" class="secao">
+      <h2>Desvende o código secreto</h2>
+      <p>Você decidiu girar a manivela...</p>
+        <!-- Conteúdo específico para a opção Novo Jogo -->
+        <div id="output"></div>
+        <label for="palpite">Digite seu palpite (1-100): </label>
+        <input type="number" id="palpite" min="1" max="100" inputmode="numeric">
+      <button id="buttonPalpite" onclick="processarPalpite()">Confirmar palpite</button>
+      <button onclick="showSection('TelaMenu')">Voltar</button>
+    </div> 
+    <div id="TelaRules" class="secao">
+      <!-- Conteúdo específico para a opção Regras -->
+      <h2>Regras</h2>
+      <p>Um número misterioso entre 1 e 100 foi escolhido como o código secreto.</p>
+      <p>Sua tarefa é desvendar esse código com até 10 tentativas.</p>
+      <p>A cada tentativa, você revela suas habilidades investigativas dando um palpite.</p>
+      <p>Se o palpite for acima ou inferior, o jogo informará que você está mirando alto ou baixo demais.</p>
+      <p>Se o seu palpite for exato, você desvendou o mistério e encerrou o caso.</p>
+      <p>Ao final, o código é revelado e é mostrado quantos pontos você fez.</p>
+      <p>Como um detetive habilidoso, você tem a opção de assumir um novo caso ou se retirar do campo.</p>
+      <button onclick="showSection('TelaMenu')">Voltar</button>
+    </div>
+    <div id="TelaCredits" class="secao">
+      <!-- Conteúdo específico para a opção Créditos -->
+      <h2>Créditos</h2>
+      <p>Você consulta suas notas de caso, buscando por pistas... E descobre que a brilhante mente de Abner Silva foi responsável por esse desafio.</p>
+      <button onclick="voltarAoMenu()">Voltar</button>
+    </div>
+    <div id="TelaExit" class="secao">
+      <!-- Conteúdo específico para a opção Sair -->
+      <h2>Página de Sair</h2>
+      <p>Você decide abandonar o caso. Até a próxima, Detetive!</p>
+      <button onclick="sairDoJogo()">Até a próxima</button>
+    </div>
+              <!-- Essa parte só ultilizarei futuramente. 1. campo de texto 2. botão de confirmação
+              <div id="game-container">
+                  <div id="output"></div>
+                  <div id="input-container">
+                      <input type="text" id="user-input" placeholder="Digite sua escolha">
+                      <button onclick="processarEscolha()">Confirmar</button>
+                  </div>
+              </div>-->
+          <script src="script.js"></script>
+  </body>
+</html>

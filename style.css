@@ -1,0 +1,153 @@
+body {
+    font-family: 'Anonymous Pro', sans-serif;
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #FFA500; /* Cor do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between; 
+    height: 97vh; /* define a altura do corpo para ser igual à altura da janela de visualização */
+/* background-image: url('https://img.freepik.com/fotos-premium/porta-do-cofre-de-banco-em-uma-renderizacao-3d-de-sala-escura_844516-1261.jpg?w=740'); */
+/* background-image: url('https://static.vecteezy.com/ti/fotos-gratis/p1/25272729-sombrio-imagem-do-uma-aco-banco-cofre-gratis-foto.jpg');*/
+    margin: 0; /* Remove a margem padrão do corpo */
+    background-size: cover; /* Isso garante que a imagem cubra todo o corpo */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-repeat: no-repeat; /* Evita repetição da imagem */ 
+    background-attachment: fixed; /* Mmantém a imagem de fundo fixa enquanto rola */ 
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+    padding: 40px 20px;
+}
+
+#telaInicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+#abertura {
+    justify-items: center;
+} 
+
+#skip{
+    font-size: 20px;
+    color: rgb(203, 252, 237);
+    padding-bottom: 40px;
+}
+
+.piscando {
+    animation: piscar 3s infinite linear;
+  }
+  
+  @keyframes piscar {
+    10% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.tituloMenu {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFD700; /* Cor do texto menu */
+    font-size: 48px; /* Tamanho da fonte menu */
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px ;
+}
+
+#game-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+#output {
+     margin-bottom: 10px;
+     text-align: center;
+}
+
+#input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secao {
+    display: none;
+} 
+
+input {
+    padding: 5px;
+    flex: 1;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+    font-family: 'Anonymous Pro', sans-serif;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto */
+    background-color: #66000000; /* Cor de fundo */
+    color: #FF4500; /* Cor do texto */
+    border: 2px solid #66000000; /* Cor da borda */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+    display: block;
+    margin: 0 auto; /* Centraliza o botão */
+    margin-bottom: 60px; /* Espaçamento inferior entre botões */ 
+}
+
+button:hover {
+    background-color: #66000000; /* Cor de fundo no hover */
+    color: #FAFAD2; /* Cor do texto no hover */
+}
+
+#buttonPalpite {
+    padding-top: 40px;
+
+}
+
+#TelaMenu  button{ 
+    font-family: 'Anonymous Pro', sans-serif;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto */
+    background-color: #66000000; /* Cor de fundo */
+    color: #FAFAD2; /* Cor do texto */
+    border: 2px solid #66000000; /* Cor da borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+    display: block;
+    margin: 0 auto; /* Centraliza o botão */
+    margin-bottom: 20px; /* Espaçamento inferior entre botões */
+}
+
+#TelaMenu button:hover {
+    background-color: #66000000; /* Cor de fundo no hover */
+    color: #FFA500; /* Cor do texto no hover */
+}
+
+#TelaRules {
+    align-items: stretch;
+}
+
+#TelaRules h2 {
+    text-align: center; /* Centraliza o texto */
+}
+
+#TelaRules p {
+    font-size: 24px; /* Tamanho desejado da fonte para o conteúdo */
+    margin-bottom: 10px; /* Espaçamento inferior entre os parágrafos */
+}
+
+#TelaCredits h2 {
+    text-align: center; /* Centraliza o texto */
+}
